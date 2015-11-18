@@ -5,7 +5,12 @@ app = flask.Flask(__name__, static_folder='static', template_folder='templates')
 
 @app.route('/')
 def index():
-    return flask.render_template("layout.html", page_to_insert="about.html")
+    return flask.render_template("layout.html", page_to_insert="news.html")
+
+
+@app.route('/news')
+def about():
+    return flask.render_template("layout.html", page_to_insert="news.html")
 
 
 @app.route('/about')
@@ -13,19 +18,19 @@ def about():
     return flask.render_template("layout.html", page_to_insert="about.html")
 
 
-# @app.route('/test')
-# def test():
-#     return flask.render_template("layout.html", page_to_insert="about.html")
-
-
-@app.route('/publications')
-def publications():
-    return flask.send_file("static/pdfs/publications.pdf")
-
-
-@app.route('/resume')
+@app.route('/music')
 def resume():
-    return flask.send_file("static/pdfs/resume.pdf")
+    return flask.render_template("layout.html", page_to_insert="music.html")
+
+
+@app.route('/events')
+def resume():
+    return flask.render_template("layout.html", page_to_insert="events.html")
+
+
+@app.route('/contact')
+def resume():
+    return flask.render_template("layout.html", page_to_insert="contact.html")
 
 
 if __name__ == '__main__':
