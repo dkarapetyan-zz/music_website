@@ -9,7 +9,7 @@ def index():
 
 
 @app.route('/news')
-def about():
+def news():
     return flask.render_template("layout.html", page_to_insert="news.html")
 
 
@@ -19,17 +19,17 @@ def about():
 
 
 @app.route('/music')
-def resume():
+def music():
     return flask.render_template("layout.html", page_to_insert="music.html")
 
 
 @app.route('/events')
-def resume():
+def events():
     return flask.render_template("layout.html", page_to_insert="events.html")
 
 
 @app.route('/contact')
-def resume():
+def contact():
     return flask.render_template("layout.html", page_to_insert="contact.html")
 
 

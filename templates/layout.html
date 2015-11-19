@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title> <%= params[:action].capitalize </title> <%= stylesheet_link_tag 'application', :media => 'all' <%=
-    javascript_include_tag 'application' <%= csrf_meta_tags
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen"
+          integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg=="
+          crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous"></script>
 </head>
+
 <body>
 
 <nav class="navbar navbar-default">
@@ -18,7 +26,7 @@
             <div class="visible-xs">
                 <a class="navbar-brand" title="DJ Theorem"
                    href="#"><img style="max-width:47px; margin-top: -18px;"
-                                 src="{{ url_for('static', filename='napoleon.gif') }}"></a>
+                                 src="{{ url_for('static', filename='images/napoleon.gif') }}"></a>
             </div>
             <div class="visible-md visible-sm visible-lg">
                 <a class="navbar-brand" title="DJ Theorem" href="#">DJ Theorem</a>
@@ -51,44 +59,25 @@
                 </li>
             </ul>
 
-            <!--
-                 -<li class="<%= activate('twitter')  visible-xs"> <a href='http://www.twitter.com/dj_theorem'Twitter</a></li>
-                 -<li class="<%= activate('soundcloud') visible-xs">  <a href='http://www.soundcloud.com/djtheorem'>SoundCloud</a></li>
-                 -->
-
             <ul class='nav navbar-nav navbar-right visible-md visible-sm visible-lg'>
-                <li><a href='http://www.twitter.com/dj_theorem'><span
-                        class='btn btn-social-icon btn-twitter'>
-						<i class='fa fa-twitter'></i></span> </a></li>
-                <li><a href='http://www.soundcloud.com/djtheorem'><span
-                        class='btn btn-social-icon btn-soundcloud'>
-						<i class='fa fa-soundcloud'></i></span></a></li>
+                <li><a href='http://www.twitter.com/dj_theorem'>
+                    <i class='fa fa-twitter'></i></a></li>
+                <li><a href='http://www.soundcloud.com/djtheorem'>
+                    <i class='fa fa-soundcloud'></i></a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 
-<div class='row text-center'><img style="max-width:250px; margin-top: 0;"
-                                  src="{{ url_for('static', filename='napoleon.gif') }}"></div>
-
-
-<div class='row'>&nbsp;</div>
-
-
-<div class='row'>&nbsp;</div>
-
-
-<div class='row'>&nbsp;</div>
-
-<div class="container  visible-md visible-sm visible-lg  ">
+<div class="container  visible-md visible-sm visible-lg">
     <div class="row">
         <div class="col-md-5 col-sm-6"><br> <br> <br>{% include page_to_insert %}
         </div>
         <div class="col-md-4 col-sm-2"></div>
         <div class="col-md-3 col-sm-4">
             <br><br><img style="max-width:250px; margin-top: 0;"
-                         src="{{ url_for('static', filename='napoleon.gif') }}">
+                         src="{{ url_for('static', filename='images/napoleon.gif') }}">
         </div>
     </div>
 </div>
@@ -96,7 +85,7 @@
 <div class="container  visible-xs ">
     <div class="row">
         <div class="col-xs-12">{% include page_to_insert %}
-</div>
+        </div>
     </div>
 </div>
 </body>
