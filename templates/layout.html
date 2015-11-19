@@ -31,12 +31,12 @@
                                                       src="{{ url_for('static', filename='images/napoleon.gif') }}"></a>
             </div>
             <div class="visible-md visible-sm visible-lg">
-                <a class="navbar-brand" title="DJ Theorem" href="#">DJ Theorem</a>
+                <a class="navbar-brand" title="DJ Theorem" href="{{ url_for("index") }}">DJ Theorem</a>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="nav navbar-nav">
-                {{ nav_link('news', 'News') }}
+                {{ nav_link('index', 'News') }}
                 {{ nav_link('about', 'About') }}
                 {{ nav_link('events', 'Events') }}
                 {{ nav_link('music', 'Music') }}

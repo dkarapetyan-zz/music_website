@@ -8,11 +8,6 @@ def index():
     return flask.render_template("layout.html", page_to_insert="news.html")
 
 
-@app.route('/news')
-def news():
-    return flask.render_template("layout.html", page_to_insert="news.html")
-
-
 @app.route('/about')
 def about():
     return flask.render_template("layout.html", page_to_insert="about.html")
